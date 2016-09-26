@@ -1,0 +1,154 @@
+body{
+	margin:0;
+	color:#b2b3b9;
+	background-image:url("1.jpg");
+	font:600 16px/18px 'Open Sans',sans-serif;
+}
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+h2{
+	color:#fff;
+	font-size:4em;
+	font-family:"Comic Sans MS", cursive, sans-serif;
+}
+.wrapper{
+	width:100%;
+	margin:auto;
+	max-width:525px;
+	min-height:670px;
+	position:relative;
+	background:url("Free-Notebook-6.jpg") no-repeat center;
+	box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+}
+.container{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:45px 70px 50px 70px;
+	background:rgba(101, 88, 40, 0.9);
+}
+.container .sign-in1,
+.container .sign-up1{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.container .sign-in,
+.container .sign-up,
+.sign-in-form .detail .check{
+	display:none;
+}
+
+.container .tab,
+.sign-in-form .detail .label,
+.sign-in-form .detail .btn{
+	text-transform:uppercase;
+}
+.container .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.container .sign-in:checked + .tab,
+.container .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+.sign-in-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.sign-in-form .detail{
+	margin-bottom:15px;
+}
+.sign-in-form .detail .label,
+.sign-in-form .detail .input,
+.sign-in-form .detail .btn{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.sign-in-form .detail .input,
+.sign-in-form .detail .btn{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255,255,255,.1);
+	margin-top:10px;
+}
+.sign-in-form .detail input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.sign-in-form .detail .label{
+	color:#aaa;
+	font-size:12px;
+}
+.sign-in-form .detail .btn{
+	background:#1161ee;
+}
+.sign-in-form .detail label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.sign-in-form .detail label .icon:before,
+.sign-in-form .detail label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.sign-in-form .detail label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.sign-in-form .detail label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.sign-in-form .detail .check:checked + label{
+	color:#fff;
+}
+.sign-in-form .detail .check:checked + label .icon{
+	background:#1161ee;
+}
+.sign-in-form .detail .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.sign-in-form .detail .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.container .sign-in:checked + .tab + .sign-up + .tab + .sign-in-form .sign-in1{
+	transform:rotate(0);
+}
+.container .sign-up:checked + .tab + .sign-in-form .sign-up1{
+	transform:rotate(0);
+}
+
+.line{
+	height:2px;
+	margin:60px 0 50px 0;
+	background:rgba(255,255,255,.2);
+}
